@@ -15,19 +15,19 @@ letter_storage = []
 
 # Utility functions
 
-def print_word_to_guess(letters: List) -> None:
+def print_word_to_guess(letters: List):
     """Utility function to print the current word to guess"""
     print("Word to guess: {0}".format(" ".join(letters)))
 
 
-def print_guesses_taken(current: int, total: int) -> None:
+def print_guesses_taken(current: int, total: int):
     """Prints how many chances the player has used"""
     print("You are on guess {0}/{1}.".format(current, total))
 
 
 # Game functions
 
-def beginning() -> None:
+def beginning():
     """Starts the game"""
     print("Hello Mate!\n")
     while True:
@@ -38,7 +38,7 @@ def beginning() -> None:
             break
 
 
-def ask_user_to_play() -> None:
+def ask_user_to_play():
     """Ask user if they want to play"""
     print("Well, that's perfect moment to play some Hangman!\n")
     while True:
@@ -52,7 +52,7 @@ def ask_user_to_play() -> None:
             continue
 
 
-def prepare_secret_word() -> None:
+def prepare_secret_word():
     """Prepare secret word and inform user of it"""
     for character in SECRET_WORD: # printing blanks for each letter in secret word
         GUESS_WORD.append("-")
@@ -61,7 +61,7 @@ def prepare_secret_word() -> None:
     print_word_to_guess(GUESS_WORD)
 
 
-def guessing() -> None:
+def guessing():
     """
     Main game loop to have user guess letters
     and inform them of the results
